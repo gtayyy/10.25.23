@@ -1,17 +1,46 @@
-let countTo = document.getElementById("countToInput").value;
-let countBy = document.getElementById("countByInput").value;
+// function handleFormSubmission(event) {
+// 	event.preventDefault();
 
+// 	let countTo = parseInt(document.getElementById("countToInput").value);
+// 	let countBy = parseInt(document.getElementById("countByInput").value);
+// }
+
+// function countUpBy(countTo, countBy) {
+// 	let results = [];
+// 	for (let index = 0; index <= countTo; index += countBy) {
+// 		results.push(countUpBy[index]);
+// 		p.append(results);
+// 		console.log(index);
+// 	}
+// }
+
+// console.log(countUpBy);
+
+
+// window.addEventListener("load", function () {
+// 	document.querySelector("form#countBy").addEventListener("submit", handleFormSubmission);
+// });
+
+// Business logic
 function countUpBy(countTo, countBy) {
-	let stringArray = [];
+	let output = [];
 	for (let index = 0; index <= countTo; index += countBy) {
-		stringArray.push(countUpBy[index]);
-		p.append(stringArray);
-        console.log(index);
+		output.push(index);
 	}
+	return output;
 }
 
+window.addEventListener("load", function () {
+	const form = document.querySelector("form#countBy");
+	form.addEventListener("submit", function (event) {
+		event.preventDefault();
+		let countTo = parseInt(document.getElementById("countToInput").value);
+		let countBy = parseInt(document.getElementById("countByInput").value);
+		const outputP = document.getElementById("results");
+		outputP.append(countUpBy(countTo, countBy));
 
+	});
 
-// for (let index = 0; index <= 100; index += 5){
-//     console.log(index);
-// }
+});
+
+// document.querySelector("div#bolded-passage").innerText = null;
