@@ -1,26 +1,3 @@
-// function handleFormSubmission(event) {
-// 	event.preventDefault();
-
-// 	let countTo = parseInt(document.getElementById("countToInput").value);
-// 	let countBy = parseInt(document.getElementById("countByInput").value);
-// }
-
-// function countUpBy(countTo, countBy) {
-// 	let results = [];
-// 	for (let index = 0; index <= countTo; index += countBy) {
-// 		results.push(countUpBy[index]);
-// 		p.append(results);
-// 		console.log(index);
-// 	}
-// }
-
-// console.log(countUpBy);
-
-
-// window.addEventListener("load", function () {
-// 	document.querySelector("form#countBy").addEventListener("submit", handleFormSubmission);
-// });
-
 // Business logic
 function countUpBy(countTo, countBy) {
 	let output = [];
@@ -29,7 +6,7 @@ function countUpBy(countTo, countBy) {
 	}
 	return output;
 }
-
+// UI Logic
 window.addEventListener("load", function () {
 	const form = document.querySelector("form#countBy");
 	form.addEventListener("submit", function (event) {
@@ -42,5 +19,3 @@ window.addEventListener("load", function () {
 	});
 
 });
-
-// document.querySelector("div#bolded-passage").innerText = null;
